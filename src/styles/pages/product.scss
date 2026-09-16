@@ -8,20 +8,18 @@ $details-padding-right: 78px;
   grid-template-areas:
     'breadcrumb'
     'media'
-    'details';
+    'details'
+    'accordion';
   max-width: $container-max-width;
   margin-inline: auto;
-  padding-bottom: 42px;
-  background-color: $color-bg-light;
 
   @include mq('lg') {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto 1fr;
     grid-template-areas:
       'media breadcrumb'
-      'media details';
-    padding-bottom: 0;
-    background-color: transparent;
+      'media details'
+      'accordion details';
   }
 
   @include mq('xl') {
@@ -31,9 +29,11 @@ $details-padding-right: 78px;
   &__breadcrumb {
     grid-area: breadcrumb;
     padding: 12px $gutter 14px;
+    background-color: $color-bg-light;
 
     @include mq('lg') {
       padding: 27px $details-padding-right 0 $details-padding-left;
+      background-color: transparent;
     }
   }
 
@@ -55,10 +55,12 @@ $details-padding-right: 78px;
 
   &__details {
     grid-area: details;
-    padding: 25px $gutter 0;
+    padding: 25px $gutter 42px;
+    background-color: $color-bg-light;
 
     @include mq('lg') {
       padding: 54px $details-padding-right 0 $details-padding-left;
+      background-color: transparent;
     }
   }
 
@@ -146,6 +148,19 @@ $details-padding-right: 78px;
 
   &__submit {
     flex: 1;
+  }
+
+    &__accordion {
+    grid-area: accordion;
+    padding: 8px $gutter 0;
+
+    @include mq('lg') {
+      padding: 0 60px;
+    }
+
+    @include mq('xl') {
+      padding: 0 94px 0 136px;
+    }
   }
 
 }

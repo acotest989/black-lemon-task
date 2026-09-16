@@ -18,13 +18,13 @@
 - [x] Product info (title, description, features)
 - [x] Purchase options (buy once / subscribe)
 - [x] Quantity selector + Add to cart button
-- [ ] Accordion (Ingredients)
+- [x] Accordion (Ingredients)
 - [ ] "You may also like" section
 
 ## Interactions
 - [x] Add to cart animation + cart counter
 - [ ] Carousel (arrows on desktop, swipe on mobile)
-- [ ] Accordion open/close
+- [x] Accordion open/close
 - [x] Quantity + / -
 - [ ] Mobile menu toggle
 
