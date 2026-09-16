@@ -13,9 +13,9 @@
 
 ## Layout
 - [x] Header (desktop nav, mobile menu)
-- [ ] Breadcrumb
-- [ ] Product gallery / image
-- [ ] Product info (title, description, features)
+- [x] Breadcrumb
+- [x] Product gallery / image
+- [x] Product info (title, description, features)
 - [ ] Purchase options (buy once / subscribe)
 - [ ] Quantity selector + Add to cart button
 - [ ] Accordion (Ingredients)

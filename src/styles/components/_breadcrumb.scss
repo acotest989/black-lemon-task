@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: $font-size-xs;
+  text-transform: uppercase;
+
+  @include mq('lg') {
+    font-size: 11px;
+  }
+
+  &__back {
+    flex-shrink: 0;
+
+    img {
+      width: 15.5px;
+      height: 10.5px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    color: $color-text-light;
+
+    & + &::before {
+      content: '/';
+      margin-inline: 0.35em;
+      color: $color-text-light;
+    }
+
+    &[aria-current='page'] {
+      font-weight: $font-weight-regular;
+      color: $color-text;
+    }
+
+    a:hover {
+      color: $color-text;
+    }
+  }
+}

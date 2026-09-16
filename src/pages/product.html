@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/main.scss">
+  <link rel="stylesheet" href="../styles/pages/product.scss">
 </head>
 <body>
     <header class="header" data-header>
@@ -44,8 +45,53 @@
     </div>
   </header>
 
-  <main>
-    <h1>Restorative Hair Mask</h1>
+   <main>
+    <section class="product">
+      <nav class="product__breadcrumb breadcrumb" aria-label="Breadcrumb">
+        <a class="breadcrumb__back" href="#" aria-label="Back to Haircare">
+          <img src="../assets/icons/arrow-left.svg" alt="">
+        </a>
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="#">All products</a></li>
+          <li class="breadcrumb__item"><a href="#">Haircare</a></li>
+          <li class="breadcrumb__item" aria-current="page">Restorative hair mask</li>
+        </ol>
+      </nav>
+
+      <div class="product__media">
+        <img class="product__image" src="../assets/images/restorative-hair-mask.png" alt="Restorative Hair Mask tube and box" width="900" height="770">
+      </div>
+
+      <div class="product__details">
+        <div class="product__header">
+          <h1 class="product__title">Restorative Hair Mask</h1>
+          <p class="product__subtitle">Nourishment in a bottle</p>
+        </div>
+
+        <p class="product__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor commodo ullamcorper a lacus vestibulum. Luctus accumsan tortor posuere ac ut.
+        </p>
+
+        <ul class="product__features">
+          <li class="feature">
+            <span class="feature__icon"><img src="../assets/icons/organic.svg" alt=""></span>
+            <span class="feature__label">100% Organic</span>
+          </li>
+          <li class="feature">
+            <span class="feature__icon"><img src="../assets/icons/organic.svg" alt=""></span>
+            <span class="feature__label">100% Organic</span>
+          </li>
+          <li class="feature">
+            <span class="feature__icon"><img src="../assets/icons/organic.svg" alt=""></span>
+            <span class="feature__label">100% Organic</span>
+          </li>
+          <li class="feature">
+            <span class="feature__icon"><img src="../assets/icons/organic.svg" alt=""></span>
+            <span class="feature__label">100% Organic</span>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <script type="module" src="../scripts/pages/product.js"></script>

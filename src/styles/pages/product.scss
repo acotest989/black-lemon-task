@@ -1,0 +1,112 @@
+@use '../abstracts' as *;
+
+$details-padding-left: 66px;
+$details-padding-right: 78px;
+
+.product {
+  display: grid;
+  grid-template-areas:
+    'breadcrumb'
+    'media'
+    'details';
+  max-width: $container-max-width;
+  margin-inline: auto;
+  padding-bottom: 42px;
+  background-color: $color-bg-light;
+
+  @include mq('lg') {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      'media breadcrumb'
+      'media details';
+    padding-bottom: 0;
+    background-color: transparent;
+  }
+
+  @include mq('xl') {
+    grid-template-columns: 5fr 3fr;
+  }
+
+  &__breadcrumb {
+    grid-area: breadcrumb;
+    padding: 12px $gutter 14px;
+
+    @include mq('lg') {
+      padding: 27px $details-padding-right 0 $details-padding-left;
+    }
+  }
+
+  &__media {
+    grid-area: media;
+    align-self: start;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 414 / 390;
+    object-fit: cover;
+
+    @include mq('lg') {
+      aspect-ratio: 900 / 770;
+    }
+  }
+
+  &__details {
+    grid-area: details;
+    padding: 25px $gutter 0;
+
+    @include mq('lg') {
+      padding: 54px $details-padding-right 0 $details-padding-left;
+    }
+  }
+
+  &__header {
+    padding-bottom: 24px;
+    border-bottom: 1px solid $color-accent;
+
+    @include mq('lg') {
+      padding-bottom: 21px;
+    }
+  }
+
+  &__title {
+    // font-size: $font-size-xxl;
+    font-size: clamp(22px, 6.8vw, $font-size-xxl);
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    margin-top: 11px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    @include mq('lg') {
+      margin-top: 8px;
+    }
+  }
+
+  &__description {
+    margin-top: 16px;
+
+    @include mq('lg') {
+      margin-top: 22px;
+    }
+  }
+
+  &__features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 35px;
+    column-gap: 8px;
+    margin-top: 50px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid $color-accent;
+
+    @include mq('lg') {
+      row-gap: 30px;
+      margin-top: 44px;
+    }
+  }
+}
