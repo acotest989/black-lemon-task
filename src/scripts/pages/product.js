@@ -1,1 +1,1 @@
-console.log('Product page loaded');
+import '../common';

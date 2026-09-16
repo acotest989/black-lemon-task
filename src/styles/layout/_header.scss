@@ -1,0 +1,114 @@
+@use '../abstracts' as *;
+
+.header {
+  position: relative;
+  z-index: 10;
+  background-color: $color-white;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto 1fr auto auto;
+    grid-template-areas: 'menu search . logo . account cart';
+    align-items: center;
+    column-gap: 16px;
+    height: $header-height-mobile;
+
+    @include mq('lg') {
+      grid-template-columns: auto 1fr auto auto auto;
+      grid-template-areas: 'logo . search account cart';
+      column-gap: 18px;
+      height: $header-height;
+    }
+  }
+
+  &__menu-toggle {
+    grid-area: menu;
+
+    @include mq('lg') {
+      display: none;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+
+    img {
+      width: 62px;
+      height: auto;
+
+      @include mq('lg') {
+        width: 70px;
+      }
+    }
+  }
+
+  &__search {
+    grid-area: search;
+  }
+
+  &__account {
+    grid-area: account;
+
+    img {
+      width: 73%;
+      height: 81%;
+    }
+  }
+
+  &__cart {
+    grid-area: cart;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-accent;
+
+    &.is-open {
+      display: block;
+    }
+
+    @include mq('lg') {
+      top: 50%;
+      left: 50%;
+      right: auto;
+      display: block;
+      border-bottom: 0;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px $gutter 24px;
+
+    @include mq('lg') {
+      flex-direction: row;
+      gap: 30px;
+      padding: 0;
+    }
+  }
+
+  &__nav-link {
+    display: block;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-base;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-accent;
+    }
+
+    @include mq('lg') {
+      min-width: 62px;
+      font-size: $font-size-sm;
+      text-align: center;
+    }
+  }
+}

@@ -10,7 +10,43 @@
   <link rel="stylesheet" href="../styles/main.scss">
 </head>
 <body>
-  <h1>Restorative Hair Mask</h1>
+    <header class="header" data-header>
+    <div class="header__inner container">
+      <button class="header__menu-toggle icon-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav" data-menu-toggle>
+        <img src="../assets/icons/menu.svg" alt="">
+      </button>
+
+      <a class="header__logo" href="#">
+        <img src="../assets/images/logo.png" alt="Act+Acre" width="70" height="57">
+      </a>
+
+      <nav class="header__nav" id="main-nav" aria-label="Main" data-nav>
+        <ul class="header__nav-list">
+          <li><a class="header__nav-link" href="#">Shop</a></li>
+          <li><a class="header__nav-link" href="#">Science</a></li>
+          <li><a class="header__nav-link" href="#">Press</a></li>
+          <li><a class="header__nav-link" href="#">Blogs</a></li>
+          <li><a class="header__nav-link" href="#">Tutorial</a></li>
+        </ul>
+      </nav>
+
+      <button class="header__search icon-button" type="button" aria-label="Search">
+        <img src="../assets/icons/search.svg" alt="">
+      </button>
+
+      <a class="header__account icon-button" href="#" aria-label="Account">
+        <img src="../assets/icons/user.svg" alt="">
+      </a>
+
+      <button class="header__cart icon-button" type="button" aria-label="Cart" data-cart>
+        <img src="../assets/icons/bag.svg" alt="">
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <h1>Restorative Hair Mask</h1>
+  </main>
 
   <script type="module" src="../scripts/pages/product.js"></script>
 </body>

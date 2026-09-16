@@ -5,14 +5,14 @@
 - [x] Install Parcel and Sass
 - [x] Configure Parcel for multiple pages
 - [x] Set up SCSS structure (variables, mixins, base, components, pages)
-- [ ] Set up JS structure (components, pages)
+- [x] Set up JS structure (components, pages)
 
 ## Design
 - [x] Extract colors, fonts and spacing from Figma
-- [ ] Export images and icons from Figma
+- [x] Export images and icons from Figma
 
 ## Layout
-- [ ] Header (desktop nav, mobile menu)
+- [x] Header (desktop nav, mobile menu)
 - [ ] Breadcrumb
 - [ ] Product gallery / image
 - [ ] Product info (title, description, features)
