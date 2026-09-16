@@ -6,6 +6,7 @@
   "source": "src/pages/*.html",
   "scripts": {
     "start": "parcel",
+    "prebuild": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\"",
     "build": "parcel build --public-url ./"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",

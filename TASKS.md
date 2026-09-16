@@ -31,5 +31,5 @@
 ## Finish
 - [x] Responsive check (mobile, tablet, desktop)
 - [x] Accessibility check (keyboard, aria, alt text)
-- [ ] Production build
+- [x] Production build
 - [ ] README (how to run, decisions, what I'd do with more time)
