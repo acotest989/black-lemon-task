@@ -2,7 +2,6 @@ function setupCarousel(root) {
   const track = root.querySelector('[data-carousel-track]');
   const prev = root.querySelector('[data-carousel-prev]');
   const next = root.querySelector('[data-carousel-next]');
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   const getStep = () => {
     const slide = track.firstElementChild;
@@ -11,10 +10,7 @@ function setupCarousel(root) {
   };
 
   const scroll = (direction) => {
-    track.scrollBy({
-      left: direction * getStep(),
-      behavior: reducedMotion.matches ? 'auto' : 'smooth',
-    });
+    track.scrollBy({ left: direction * getStep() });
   };
 
   const updateArrows = () => {

@@ -72,10 +72,6 @@
       .header__cart-count {
         animation: badge-pop 0.4s ease;
       }
-
-      @media (prefers-reduced-motion: reduce) {
-        animation: none;
-      }
     }
   }
 

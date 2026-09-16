@@ -28,6 +28,7 @@ $arrow-gap: 18px;
     scroll-snap-type: x mandatory;
     scroll-padding-inline: $gutter;
     scrollbar-width: none;
+    scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
       display: none;

@@ -29,12 +29,7 @@ function render({ bump = false } = {}) {
     badge.hidden = count === 0;
     cart.classList.toggle('is-empty', count === 0);
     cart.setAttribute('aria-label', count ? `Cart, ${count} items` : 'Cart');
-
-    if (bump) {
-      cart.classList.remove('is-bumping');
-      void cart.offsetWidth; // restart the animation on repeated clicks
-      cart.classList.add('is-bumping');
-    }
+    if (bump) cart.classList.add('is-bumping');
   });
 }
 
@@ -52,5 +47,8 @@ export function addToCart({ id, purchaseType, quantity }) {
 }
 
 export function initCart() {
+  document.querySelectorAll('[data-cart]').forEach((cart) => {
+    cart.addEventListener('animationend', () => cart.classList.remove('is-bumping'));
+  });
   render();
 }
