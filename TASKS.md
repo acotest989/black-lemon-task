@@ -19,11 +19,11 @@
 - [x] Purchase options (buy once / subscribe)
 - [x] Quantity selector + Add to cart button
 - [x] Accordion (Ingredients)
-- [ ] "You may also like" section
+- [x] "You may also like" section
 
 ## Interactions
 - [x] Add to cart animation + cart counter
-- [ ] Carousel (arrows on desktop, swipe on mobile)
+- [x] Carousel (arrows on desktop, swipe on mobile)
 - [x] Accordion open/close
 - [x] Quantity + / -
 - [ ] Mobile menu toggle

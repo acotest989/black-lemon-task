@@ -1,0 +1,83 @@
+@use '../abstracts' as *;
+
+$arrow-size: 29px;
+$arrow-gap: 18px;
+
+.carousel {
+  --carousel-gap: 40px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+
+  @include mq('lg') {
+    --carousel-gap: 60px;
+
+    grid-template-columns: $arrow-size minmax(0, 1fr) $arrow-size;
+    column-gap: $arrow-gap;
+    padding-inline: 65px;
+    container-type: inline-size;
+  }
+
+  &__track {
+    display: flex;
+    gap: var(--carousel-gap);
+    padding-inline: $gutter;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: $gutter;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include mq('lg') {
+      padding-inline: 0;
+      scroll-padding-inline: 0;
+    }
+  }
+
+  &__slide {
+    flex: 0 0 69vw;
+    scroll-snap-align: start;
+
+    @include mq('md') {
+      flex-basis: 40vw;
+    }
+
+    @include mq('lg') {
+      flex-basis: calc((100% - 2 * var(--carousel-gap)) / 3);
+    }
+  }
+
+  &__arrow {
+    display: none;
+    width: $arrow-size;
+    height: $arrow-size;
+    transition: opacity 0.2s ease;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &--next img {
+      transform: scaleX(-1);
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    @include mq('lg') {
+      display: block;
+      // Center on the product image: slide width × 5/4 (image ratio) ÷ 2
+      margin-top: calc(
+        (100cqw - 2 * #{$arrow-size + $arrow-gap} - 2 * var(--carousel-gap)) / 3 * 0.625 - #{$arrow-size * 0.5}
+      );
+    }
+  }
+}

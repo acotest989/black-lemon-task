@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.product-card {
+  font-family: $font-secondary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+  &__link {
+    display: block;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin-top: 6px;
+    font-size: inherit;
+
+    @include mq('lg') {
+      margin-top: 15px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 2px;
+    font-weight: $font-weight-light;
+  }
+
+  &__price {
+    margin-top: 21px;
+    letter-spacing: $letter-spacing-base;
+
+    @include mq('lg') {
+      margin-top: 33px;
+      font-size: $font-size-md;
+    }
+  }
+}

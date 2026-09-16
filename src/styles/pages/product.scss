@@ -150,7 +150,7 @@ $details-padding-right: 78px;
     flex: 1;
   }
 
-    &__accordion {
+  &__accordion {
     grid-area: accordion;
     padding: 8px $gutter 0;
 
@@ -162,5 +162,27 @@ $details-padding-right: 78px;
       padding: 0 94px 0 136px;
     }
   }
+}
 
+.related {
+  max-width: $container-max-width;
+  margin: 46px auto 0;
+  padding-bottom: 60px;
+
+  @include mq('lg') {
+    margin-top: 92px;
+  }
+
+  &__title {
+    margin-bottom: 84px;
+    font-family: $font-secondary;
+    font-size: $font-size-xl;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include mq('lg') {
+      margin-bottom: 13px;
+      font-size: $font-size-xxl;
+    }
+  }
 }
