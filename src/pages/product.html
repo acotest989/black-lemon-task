@@ -90,6 +90,35 @@
             <span class="feature__label">100% Organic</span>
           </li>
         </ul>
+
+        <form class="product__purchase" data-add-to-cart-form>
+          <fieldset class="product__options">
+            <legend class="visually-hidden">Purchase option</legend>
+
+            <label class="radio">
+              <input class="radio__input" type="radio" name="purchase-type" value="once" checked>
+              <span class="radio__control" aria-hidden="true"></span>
+              <span class="radio__label">Buy Once | $38</span>
+            </label>
+
+            <label class="radio">
+              <input class="radio__input" type="radio" name="purchase-type" value="subscribe">
+              <span class="radio__control" aria-hidden="true"></span>
+              <span class="radio__label">Subscribe (SAVE 20%) | <span class="product__sale-price">$30</span></span>
+            </label>
+          </fieldset>
+
+          <div class="product__actions">
+            <div class="quantity" data-quantity>
+              <button class="quantity__button" type="button" aria-label="Decrease quantity" data-quantity-decrease>-</button>
+              <input class="quantity__input" type="number" name="quantity" value="1" min="1" max="99" aria-label="Quantity" data-quantity-input>
+              <button class="quantity__button" type="button" aria-label="Increase quantity" data-quantity-increase>+</button>
+            </div>
+
+            <button class="product__submit button button--primary" type="submit">Add to cart</button>
+          </div>
+        </form>
+
       </div>
     </section>
   </main>

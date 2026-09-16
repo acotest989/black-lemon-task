@@ -16,8 +16,8 @@
 - [x] Breadcrumb
 - [x] Product gallery / image
 - [x] Product info (title, description, features)
-- [ ] Purchase options (buy once / subscribe)
-- [ ] Quantity selector + Add to cart button
+- [x] Purchase options (buy once / subscribe)
+- [x] Quantity selector + Add to cart button
 - [ ] Accordion (Ingredients)
 - [ ] "You may also like" section
 
@@ -25,7 +25,7 @@
 - [ ] Add to cart animation + cart counter
 - [ ] Carousel (arrows on desktop, swipe on mobile)
 - [ ] Accordion open/close
-- [ ] Quantity + / -
+- [x] Quantity + / -
 - [ ] Mobile menu toggle
 
 ## Finish

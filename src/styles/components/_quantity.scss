@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+.quantity {
+  display: grid;
+  flex-shrink: 0;
+  grid-template-columns: repeat(3, 1fr);
+  width: 111px;
+  height: 47px;
+  border: 1px solid $color-black;
+  font-family: $font-secondary;
+  font-size: $font-size-base;
+  color: $color-black;
+
+  &__button {
+    transition: color 0.2s ease;
+
+    &:hover:not(:disabled) {
+      color: $color-accent;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    text-align: center;
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: $font-size-base;
+  cursor: pointer;
+
+  &__input {
+    @include visually-hidden;
+  }
+
+  &__control {
+    position: relative;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin-left: 4px;
+    border: 1px solid $color-accent;
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 2px;
+      border-radius: 50%;
+      background-color: $color-accent;
+      transform: scale(0);
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &__input:checked + &__control::after {
+    transform: scale(1);
+  }
+
+  &__input:focus-visible + &__control {
+    outline: 2px solid $color-text;
+    outline-offset: 2px;
+  }
+
+  &__input:not(:checked) ~ &__label {
+    color: $color-text-muted;
+  }
+}

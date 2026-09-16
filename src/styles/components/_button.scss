@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use '../abstracts' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 47px;
+  padding-inline: 12px;
+  font-family: $font-secondary;
+  font-size: clamp(14px, 4.35vw, $font-size-md);
+  letter-spacing: $letter-spacing-base;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+
+  @include mq('lg') {
+    font-size: $font-size-base;
+  }
+
+  &--primary {
+    color: $color-text;
+    background-color: $color-primary;
+
+    &:hover {
+      background-color: color.adjust($color-primary, $lightness: -6%);
+    }
+  }
+}

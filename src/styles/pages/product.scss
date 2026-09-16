@@ -109,4 +109,43 @@ $details-padding-right: 78px;
       margin-top: 44px;
     }
   }
+
+    &__purchase {
+    margin-top: 41px;
+
+    @include mq('lg') {
+      margin-top: 30px;
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 0;
+  }
+
+  &__sale-price {
+    color: $color-sale;
+
+    @include mq('lg') {
+      color: inherit;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 19px;
+    margin-top: 47px;
+
+    @include mq('lg') {
+      gap: 16px;
+      margin-top: 50px;
+    }
+  }
+
+  &__submit {
+    flex: 1;
+  }
+
 }
