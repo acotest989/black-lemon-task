@@ -27,6 +27,7 @@ export function flyToCart(source, target, fallbackOrigin) {
   const from = getStartRect(source, fallbackOrigin);
   const to = target.getBoundingClientRect();
   const clone = source.cloneNode();
+  clone.src = source.currentSrc;
 
   clone.className = 'fly-to-cart';
   clone.removeAttribute('data-product-image');

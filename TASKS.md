@@ -29,7 +29,7 @@
 - [ ] Mobile menu toggle
 
 ## Finish
-- [ ] Responsive check (mobile, tablet, desktop)
-- [ ] Accessibility check (keyboard, aria, alt text)
+- [x] Responsive check (mobile, tablet, desktop)
+- [x] Accessibility check (keyboard, aria, alt text)
 - [ ] Production build
 - [ ] README (how to run, decisions, what I'd do with more time)
