@@ -3,12 +3,12 @@
 ## Setup
 - [x] Init git repository
 - [x] Install Parcel and Sass
-- [ ] Configure Parcel for multiple pages
-- [ ] Set up SCSS structure (variables, mixins, base, components, pages)
+- [x] Configure Parcel for multiple pages
+- [x] Set up SCSS structure (variables, mixins, base, components, pages)
 - [ ] Set up JS structure (components, pages)
 
 ## Design
-- [ ] Extract colors, fonts and spacing from Figma
+- [x] Extract colors, fonts and spacing from Figma
 - [ ] Export images and icons from Figma
 
 ## Layout

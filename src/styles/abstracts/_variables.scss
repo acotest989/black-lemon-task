@@ -1,3 +1,39 @@
+// Colors
+$color-white: #fff;
+$color-black: #000;
+$color-text: #4d4d4d;
+$color-text-muted: rgb(77 77 77 / 50%);
+$color-text-light: #a9a9a9;
+$color-accent: #9f938b;
+$color-primary: #bfabab;
+$color-sale: #d35d5d;
+$color-bg-light: #f6f6f5;
+
+// Typography
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Lato', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+
+$font-size-xs: 10px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-xxl: 28px;
+
+$line-height-base: 1.6;
+$letter-spacing-base: 0.05em;
+
+// Layout
+$container-max-width: 1440px;
+$gutter: 26px;
+$header-height: 65px;
+
+// Breakpoints
 $breakpoints: (
   'md': 768px,
   'lg': 1024px,
