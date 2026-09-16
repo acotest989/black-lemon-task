@@ -22,7 +22,7 @@
 - [ ] "You may also like" section
 
 ## Interactions
-- [ ] Add to cart animation + cart counter
+- [x] Add to cart animation + cart counter
 - [ ] Carousel (arrows on desktop, swipe on mobile)
 - [ ] Accordion open/close
 - [x] Quantity + / -

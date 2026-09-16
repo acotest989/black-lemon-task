@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../styles/pages/product.scss">
 </head>
 <body>
-    <header class="header" data-header>
+  <header class="header" data-header>
     <div class="header__inner container">
       <button class="header__menu-toggle icon-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav" data-menu-toggle>
         <img src="../assets/icons/menu.svg" alt="">
@@ -41,11 +41,12 @@
 
       <button class="header__cart icon-button" type="button" aria-label="Cart" data-cart>
         <img src="../assets/icons/bag.svg" alt="">
+        <span class="header__cart-count" data-cart-count hidden>0</span>
       </button>
     </div>
   </header>
 
-   <main>
+  <main>
     <section class="product">
       <nav class="product__breadcrumb breadcrumb" aria-label="Breadcrumb">
         <a class="breadcrumb__back" href="#" aria-label="Back to Haircare">
@@ -59,7 +60,7 @@
       </nav>
 
       <div class="product__media">
-        <img class="product__image" src="../assets/images/restorative-hair-mask.png" alt="Restorative Hair Mask tube and box" width="900" height="770">
+        <img class="product__image" src="../assets/images/restorative-hair-mask.png" alt="Restorative Hair Mask tube and box" width="900" height="770" data-product-image>
       </div>
 
       <div class="product__details">
@@ -91,7 +92,7 @@
           </li>
         </ul>
 
-        <form class="product__purchase" data-add-to-cart-form>
+        <form class="product__purchase" data-add-to-cart-form data-product-id="restorative-hair-mask" data-product-name="Restorative Hair Mask">
           <fieldset class="product__options">
             <legend class="visually-hidden">Purchase option</legend>
 
@@ -122,6 +123,8 @@
       </div>
     </section>
   </main>
+
+  <p class="visually-hidden" aria-live="polite" data-cart-status></p>
 
   <script type="module" src="../scripts/pages/product.js"></script>
 </body>
