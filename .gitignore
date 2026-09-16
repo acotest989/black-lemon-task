@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.parcel-cache/
+.mcp.json
+.DS_Store
+Coding Test - Frontend.pdf

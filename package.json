@@ -1,0 +1,19 @@
+{
+  "name": "black-lemon-task",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "source": "src/pages/*.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --public-url ./"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.16.4",
+    "sass": "^1.104.1"
+  }
+}
