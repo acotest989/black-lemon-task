@@ -69,6 +69,10 @@
     &.is-bumping {
       animation: cart-bump 0.4s ease;
 
+      .header__cart-count {
+        animation: badge-pop 0.4s ease;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         animation: none;
       }
@@ -152,5 +156,15 @@
 @keyframes cart-bump {
   40% {
     transform: scale(1.25);
+  }
+}
+
+@keyframes badge-pop {
+  0% {
+    transform: scale(0.5);
+  }
+
+  60% {
+    transform: scale(1.3);
   }
 }

@@ -1,11 +1,11 @@
 import { addToCart } from './cart';
-import { flyToCart } from '../utils/fly-to-cart';
 
 const FEEDBACK_DURATION = 1500;
 
 function setupForm(form) {
-  const submit = form.querySelector('[type="submit"]');
-  const image = document.querySelector('[data-product-image]');
+  const submit = form.querySelector('[data-add-to-cart-submit]');
+  if (!submit) return;
+
   const status = document.querySelector('[data-cart-status]');
   const defaultLabel = submit.textContent;
   let feedbackTimer;
@@ -20,24 +20,19 @@ function setupForm(form) {
     }, FEEDBACK_DURATION);
   };
 
-  form.addEventListener('submit', async (event) => {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const data = new FormData(form);
     const quantity = Number(data.get('quantity'));
-    const cart = document.querySelector('[data-cart]');
-
-    showFeedback();
-
-    if (image && cart) {
-      await flyToCart(image, cart, submit);
-    }
 
     addToCart({
       id: form.dataset.productId,
       purchaseType: data.get('purchase-type'),
       quantity,
     });
+
+    showFeedback();
 
     if (status) {
       status.textContent = `${quantity} × ${form.dataset.productName} added to cart`;
