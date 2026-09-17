@@ -26,10 +26,10 @@
 - [x] Carousel (arrows on desktop, swipe on mobile)
 - [x] Accordion open/close
 - [x] Quantity + / -
-- [ ] Mobile menu toggle
+- [x] Mobile menu toggle
 
 ## Finish
 - [x] Responsive check (mobile, tablet, desktop)
 - [x] Accessibility check (keyboard, aria, alt text)
 - [x] Production build
-- [ ] README (how to run, decisions, what I'd do with more time)
+- [x] README (how to run, decisions, what I'd do with more time)
