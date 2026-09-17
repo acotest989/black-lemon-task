@@ -71,16 +71,9 @@ Performance 100 · Accessibility 96 · Best Practices 96 · SEO 100
 - **Small screens** – title, feature items and button scale down below the 414px mobile design so nothing wraps or overlaps.
 - **Additions** – mobile menu, hover/focus states, tablet layout and the cart counter aren't in the design.
 
-## Alternative version (Alpine.js)
-
-The same page is also built with Alpine.js, with a simpler structure and shared HTML partials: [Alpine.js version](LINK).
-
-- **Vanilla JS (this repo)** – smallest bundle, no dependencies, behaviour lives in ES modules.
-- **Alpine.js** – declarative state in the markup, cart as a global store, related products rendered from data.
-
 ## What I would do with more time
 
-- **HTML partials** so the header isn't duplicated across pages (done in the Alpine.js version).
+- **HTML partials** so the header isn't duplicated across pages.
 - **Self-hosted fonts** to remove the render-blocking Google Fonts request.
 - **Products from data** – load the carousel products from JSON/API and render the cards in a loop instead of repeating the markup six times.
 - **A real cart** – mini-cart drawer and cart page.
