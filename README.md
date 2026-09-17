@@ -2,6 +2,8 @@
 
 Responsive product page built from the Figma design as part of the Black Lemon frontend coding test.
 
+**Live demo:** https://acotest989.github.io/black-lemon-task/
+
 ## Getting started
 
 Requirements: Node.js 18+
